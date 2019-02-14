@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://www.fonts-online.ru/font/Mga" rel="stylesheet">
+<script src="js/jquery-1.8.3.js"></script>
+
+
+<style>
+
+#fullscreen-bg
+{
+	/*border:solid green 1px;*/
+	position: relative;
+}
+#overlay1
+{
+	position: absolute;
+	top:0;
+	left:0;
+	height: 100%;
+	width: 100%;
+	z-index: 2;
+	background-image:url(grad2.png);
+	background-size:100% 100%;
+	background-repeat:no-repeat;
+}
+body
+{
+background-image:url(Gradient.png);
+background-size: 100%;
+background-repeat: no-repeat;
+margin:0;
+background-color:black;
+overflow-x:hidden;
+}
+.column1
+{
+width:6.5vw;
+/*border:1px solid pink;*/
+height:20vw;
+float:left;
+}
+.logo
+{
+width:4vw;
+/*border:1px solid red;*/
+height:5vw;
+margin:1.3vw;
+float: left;
+background-image:url(logo.png);
+background-repeat: no-repeat;
+background-size: 100% 100%;
+margin:-2.3vw 0 0 2vw;
+}
+.header
+{
+/*border:1px solid green;*/
+}
+body1
+{
+/*border:1px solid orange;*/
+}
+btn1
+{
+/*border:1px solid gray;*/
+}
+.btns
+{
+/*border:1px solid blue;*/
+height:6.5vw;
+margin-left:6.5vw;
+}
+.column2
+{
+/*border:1px solid white;*/
+margin-left:6.5vw;
+}
+
+.turn
+{
+	width:90vw;
+	height:70vw;
+	background-image:url(wing.png);
+	position:absolute;
+	right:0vw;
+	top:-10vw;
+	/*border:1px solid red;*/
+	background-size:100% 100%;
+	z-index:-2;
+}
+.general_clas
+{
+	opacity:0;
+	/*position:absolute;*/
+	/*border:1px solid green;*/
+	width:100vw;
+	/*height:100vw;*/
+	z-index:1;
+	margin-bottom:16.8vw;
+}
+.general_clas:hover 
+{
+	animation: moviobzor2 2s linear;
+	animation-fill-mode: forwards;
+}
+@keyframes moviobzor2
+{
+	0%{opacity:0;}
+	100%{opacity:1;}
+}
+
+
+.turn:hover
+{
+	transform: perspective(1000px) translate3d(9.08755px, -4.12294px, -20.6147px) rotate3d(0.412294, 0.908755, 0, 2deg);
+}
+h2
+{
+	font-size:6.7vw;
+	font-weight:100;
+	font-family: 'Mga', Regular;
+	color:#dc9747;
+	letter-spacing:0.1vw;
+	/*border:1px solid green;*/
+	margin:4.9vw 0 0 29vw;
+	width:25vw;
+}
+h3
+{
+	text-align:left;
+	font-size:5.1vw;
+	font-weight:100;
+	font-family: 'Mga', Regular;
+	color:#dc9747;
+	top:14.8vw;
+	left:10vw;
+	letter-spacing:0.07vw;
+	/*border:1px solid red;*/
+	margin:0vw 0 0 13.7vw;
+	width:75vw;
+}
+.korshun
+{
+text-align:left;
+font-size:2vw;
+font-weight:100;
+font-family: 'Mga', Regular;
+color:#dc9747;
+width:75vw;
+margin:0.9vw 0 0 15.4vw;
+}
+.btn1
+{
+text-align:left;
+font-size:1.5vw;
+font-weight:100;
+font-family: 'Mga', Regular;
+color:#dc9747;
+width:7vw;
+margin:3vw 0 0 0.9vw;
+}
+.btn2 
+{
+text-align:left;
+font-size:1.5vw;
+font-weight:100;
+font-family: 'Mga', Regular;
+color:RGB(220,151,71);
+width:7vw;
+margin:-1.5vw 0 0 9.4vw;
+
+}
+.btn2 a
+{
+
+color:RGB(220,151,71);
+
+
+}
+.btn3
+{
+text-align:left;
+font-size:1.5vw;
+font-weight:100;
+font-family: 'Mga', Regular;
+color:#dc9747;
+width:7vw;
+margin:-1.5vw 0 0 18.2vw;
+}
+.btn4
+{
+text-align:left;
+font-size:1.5vw;
+font-weight:100;
+font-family: 'Mga', Regular;
+color:#dc9747;
+width:14vw;
+margin:-1.6vw 0 0 27.4vw;
+}
+.buy_btn
+{
+	border:0.1vw solid #dc9747;
+	width:15vw;
+	height:3vw;
+	border-radius:4vw;
+	font-size: 1.5vw;
+	font-weight:300;
+	font-family: "Mga";
+	text-align:center;
+	overflow:hidden;
+	margin:5vw 0 0 33.1vw;
+}
+.buy_btn a
+{
+	display:block;
+	height:100%;
+	width:100%;
+	padding-top:1vw;
+	color:#dc9747;
+	text-decoration: none;
+}
+.buy_btn a:hover
+{
+
+}
+.buy_btn a:active
+{
+	background-color:#d419c0;
+}
+.buy_btn2
+{
+	border:0.1vw solid #dc9747;
+	width:15vw;
+	height:3vw;
+	border-radius:4vw;
+	font-size: 1.5vw;
+	font-weight:300;
+	font-family: "Mga";
+	text-align:center;
+	overflow:hidden;
+	margin:-3.3vw 0 0 51.3vw;
+	text-decoration:none;
+}
+a 
+{text-decoration:none;}
+.buy_btn2 a
+{
+	display:block;
+	height:100%;
+	width:100%;
+	padding-top:1vw;
+	color:#dc9747;
+	text-decoration: none;
+}
+.buy_btn2 a:hover
+{
+
+}
+.buy_btn2 a:active
+{
+	background-color:#d419c0;
+}
+.s_down
+{
+width:5vw;
+/*border:1px solid red;*/
+height:5vw;
+margin:1.3vw;
+float: left;
+background-image:url(moon.png);
+background-repeat: no-repeat;
+background-size: 100% 100%;
+margin:3vw 0 0 46.8vw;
+z-index:1;
+}
+.a_down
+{
+width:2vw;
+/*border:1px solid red;*/
+height:2vw;
+margin:1.3vw;
+float: left;
+background-image:url(arrow.png);
+background-repeat: no-repeat;
+background-size: 100% 100%;
+margin:-4vw 0 0 48.2vw;
+z-index:2;
+	animation: movi3 2s linear infinite;
+}
+@keyframes movi3
+{
+	20%{opacity:0;}
+	100%{opacity:100;}
+}
+/*===============================================Content1===============================================================*/
+.content2
+{
+background-color: red;
+background-repeat: no-repeat;
+background-size: 100% 100%;
+/*border:1px solid white;*/
+width:100vw;
+height:110vw;
+}
+.vertushka:hover 
+{
+
+}
+@keyframes moviobzor1
+{
+	0%{opacity:0;}
+	100%{opacity:1;}
+}
+
+.content2_2
+{
+position:absolute;
+width:100vw;
+height:110vw;
+/*border:1px solid green;*/
+}
+.vertushka
+{
+position:absolute;
+background-image:url(vertushka2.png);
+background-size: 78% 78%;
+min-height:100vw;
+min-width:100vw;
+background-repeat: no-repeat;
+z-index:21;
+top:vw;
+background-position:right 35%;
+}
+
+.eightloktey
+{
+position:absolute;
+background-image:url(eight.png);
+background-size: 78% 78%;
+min-height:100vw;
+min-width:100vw;
+/*border:1px solid yellow;*/
+background-repeat: no-repeat;
+z-index:23;
+top:vw;
+background-position:right 35%;
+}
+.esciz
+{
+position:absolute;
+background-image:url(esciz.png);
+background-size: 46% 46%;
+background-repeat: no-repeat;
+z-index:22;
+min-height:100vw;
+min-width:100vw;
+background-position:left 5%;
+}
+.name_part
+{
+z-index:24;
+	font-size:2vw;
+	font-weight:100;
+	font-family: 'Mga', Regular;
+	color:#dc9747;
+	/*border:1px solid green;*/
+	position:absolute;
+	width:25vw;
+	left:4.1vw;
+	top:10.9vw;
+	text-shadow: 1px 1px 1px black, 0 0 1em white;
+}
+.img_text1
+{
+position:absolute;
+background-image:url(М.png);
+background-size: 26% 10%;
+background-repeat: no-repeat;
+z-index:26;
+min-height:100vw;
+min-width:100vw;
+background-position:left 17.1%;
+margin-left:4.2vw;
+}
+.img_text2
+{
+position:absolute;
+background-image:url(text2.png);
+background-size: 30% 5%;
+background-repeat: no-repeat;
+z-index:27;
+min-height:100vw;
+min-width:100vw;
+background-position:left 30%;
+/*border:1px solid orange;*/
+margin-left:65.7vw;
+}
+.esciz_2
+{
+position:absolute;
+background-image:url(esciz2.png);
+background-size: 48% 60%;
+background-repeat: no-repeat;
+z-index:28;
+min-height:100vw;
+min-width:100vw;
+background-position:left 90%;
+/*border:1px solid orange;*/
+margin-top:15vw;
+}
+
+.procent
+{
+position:absolute;
+background-image:url(materials.png);
+background-repeat: no-repeat;
+z-index:30;
+min-height:100vw;
+min-width:100vw;
+margin-top:15.3vw;
+background-position:left 78%;
+background-size: 12% 12%;
+margin-left:3.2vw;
+/*border:1px solid pink;*/
+}
+.img_text4
+{
+position:absolute;
+background-image:url(text3.png);
+background-repeat: no-repeat;
+z-index:30;
+min-height:100vw;
+min-width:100vw;
+margin-top:14.7vw;
+background-position:left 78%;
+background-size: 14% 8%;
+margin-left:15.8vw;
+/*border:1px solid pink;*/
+}
+.img_text5
+{
+position:absolute;
+background-image:url(text4.png);
+background-repeat: no-repeat;
+z-index:30;
+min-height:100vw;
+min-width:100vw;
+margin-top:3.3vw;
+background-position:left 78%;
+background-size: 25% 7%;
+margin-left:52.2vw;
+/*border:1px solid pink;*/
+}
+#fullscreen-bg__video
+{
+	position: raletive;
+	top: 0;
+	left: 0;
+	width: 100%;
+	margin:0;
+	padding:0;
+	z-index:1;
+}
+.content2:hover
+{
+	color: blue;
+}
+#video2
+{
+position:absolute;
+width:100vw;
+height:110vw;
+z-index:100;
+/*border:solid red 1px;*/
+background-image:url(grad2.png);
+background-size:100% 100%;
+background-repeat:no-repeat;
+z-index:700;
+}
+#kolesa
+{
+position:absolute;
+/*border:solid blue 1px;*/
+background-image:url(kolesa.png);
+background-repeat:no-repeat;
+background-size:100% 100%;
+top:55vw;
+left:0;
+z-index:500;
+width:11.25vw;
+height:7.5vw;
+}
+#korabl
+{
+position:absolute;
+/*border:solid blue 1px;*/
+background-image:url(korabl.png);
+background-repeat:no-repeat;
+background-size:100% 100%;
+top:55vw;
+left:15vw;
+z-index:500;
+width:15vw;
+height:10vw;
+}
+#vint
+{
+position:absolute;
+/*border:solid blue 1px;*/
+background-image:url(vint.png);
+background-repeat:no-repeat;
+background-size:100% 100%;
+top:55vw;
+left:30vw;
+z-index:500;
+width:15vw;
+height:10vw;
+}
+#pushka
+{
+position:absolute;
+/*border:solid blue 1px;*/
+background-image:url(pushka.png);
+background-repeat:no-repeat;
+background-size:100% 100%;
+top:55vw;
+left:45vw;
+z-index:500;
+width:15vw;
+height:10vw;
+}
+#telega
+{
+position:absolute;
+/*border:solid blue 1px;*/
+background-image:url(telega.png);
+background-repeat:no-repeat;
+background-size:100% 100%;
+top:55vw;
+left:65vw;
+z-index:500;
+width:15vw;
+height:10vw;
+}
+#arbalet
+{
+position:absolute;
+/*border:solid blue 1px;*/
+background-image:url(arbalet.png);
+background-repeat:no-repeat;
+background-size:100% 100%;
+top:55vw;
+left:80vw;
+z-index:500;
+width:15vw;
+height:10vw;
+}
+#baraban
+{
+position:absolute;
+/*border:solid blue 1px;*/
+background-image:url(baraban.png);
+background-repeat:no-repeat;
+background-size:100% 100%;
+top:65vw;
+left:80vw;
+z-index:500;
+width:15vw;
+height:10vw;
+}
+#orniopter
+{
+position:absolute;
+/*border:solid blue 1px;*/
+background-image:url(orniopter.png);
+background-repeat:no-repeat;
+background-size:100% 100%;
+top:65vw;
+left:65vw;
+z-index:500;
+width:15vw;
+height:10vw;
+}
+#mexanism
+{
+position:absolute;
+/*border:solid blue 1px;*/
+background-image:url(mexanism.png);
+background-repeat:no-repeat;
+background-size:100% 100%;
+top:65vw;
+left:45vw;
+z-index:500;
+width:15vw;
+height:10vw;
+}
+#shtuka
+{
+position:absolute;
+/*border:solid blue 1px;*/
+background-image:url(shtuka.png);
+background-repeat:no-repeat;
+background-size:100% 100%;
+top:65vw;
+left:30vw;
+z-index:500;
+width:15vw;
+height:10vw;
+}
+#telescop
+{
+position:absolute;
+/*border:solid blue 1px;*/
+background-image:url(telescop.png);
+background-repeat:no-repeat;
+background-size:100% 100%;
+top:65vw;
+left:15vw;
+z-index:500;
+width:15vw;
+height:10vw;
+}
+#vereteno
+{
+position:absolute;
+/*border:solid blue 1px;*/
+background-image:url(vereteno.png);
+background-repeat:no-repeat;
+background-size:100% 100%;
+top:65vw;
+left:0vw;
+z-index:500;
+width:15vw;
+height:10vw;
+}
+#kolesa2
+{
+position:absolute;
+/*border:solid blue 1px;*/
+background-image:url(kolesa.png);
+background-repeat:no-repeat;
+background-size:100% 100%;
+top:75vw;
+left:0;
+z-index:500;
+width:11.25vw;
+height:7.5vw;
+}
+#korabl2
+{
+position:absolute;
+/*border:solid blue 1px;*/
+background-image:url(korabl.png);
+background-repeat:no-repeat;
+background-size:100% 100%;
+top:75vw;
+left:15vw;
+z-index:500;
+width:15vw;
+height:10vw;
+}
+#vint2
+{
+position:absolute;
+/*border:solid blue 1px;*/
+background-image:url(vint.png);
+background-repeat:no-repeat;
+background-size:100% 100%;
+top:75vw;
+left:30vw;
+z-index:500;
+width:15vw;
+height:10vw;
+}
+#pushka2
+{
+position:absolute;
+/*border:solid blue 1px;*/
+background-image:url(pushka.png);
+background-repeat:no-repeat;
+background-size:100% 100%;
+top:75vw;
+left:45vw;
+z-index:500;
+width:15vw;
+height:10vw;
+}
+#telega2
+{
+position:absolute;
+/*border:solid blue 1px;*/
+background-image:url(telega.png);
+background-repeat:no-repeat;
+background-size:100% 100%;
+top:75vw;
+left:65vw;
+z-index:500;
+width:15vw;
+height:10vw;
+}
+#arbalet2
+{
+position:absolute;
+/*border:solid blue 1px;*/
+background-image:url(arbalet.png);
+background-repeat:no-repeat;
+background-size:100% 100%;
+top:75vw;
+left:80vw;
+z-index:500;
+width:15vw;
+height:10vw;
+}
+#baraban2
+{
+position:absolute;
+/*border:solid blue 1px;*/
+background-image:url(baraban.png);
+background-repeat:no-repeat;
+background-size:100% 100%;
+top:85vw;
+left:80vw;
+z-index:500;
+width:15vw;
+height:10vw;
+}
+#orniopter2
+{
+position:absolute;
+/*border:solid blue 1px;*/
+background-image:url(orniopter.png);
+background-repeat:no-repeat;
+background-size:100% 100%;
+top:85vw;
+left:65vw;
+z-index:500;
+width:15vw;
+height:10vw;
+}
+#mexanism2
+{
+position:absolute;
+/*border:solid blue 1px;*/
+background-image:url(mexanism.png);
+background-repeat:no-repeat;
+background-size:100% 100%;
+top:85vw;
+left:45vw;
+z-index:500;
+width:15vw;
+height:10vw;
+}
+#shtuka2
+{
+position:absolute;
+/*border:solid blue 1px;*/
+background-image:url(shtuka.png);
+background-repeat:no-repeat;
+background-size:100% 100%;
+top:85vw;
+left:30vw;
+z-index:500;
+width:15vw;
+height:10vw;
+}
+#telescop2
+{
+position:absolute;
+/*border:solid blue 1px;*/
+background-image:url(telescop.png);
+background-repeat:no-repeat;
+background-size:100% 100%;
+top:85vw;
+left:15vw;
+z-index:500;
+width:15vw;
+height:10vw;
+}
+#vereteno2
+{
+position:absolute;
+/*border:solid blue 1px;*/
+background-image:url(vereteno.png);
+background-repeat:no-repeat;
+background-size:100% 100%;
+top:85vw;
+left:0vw;
+z-index:500;
+width:15vw;
+height:10vw;
+}
+
+.slideUp
+{
+animation-name: floating;
+-webkit-animation-name: floating;
+animation-duration: 1.5s;   
+-webkit-animation-duration: 1.5s;
+
+animation-iteration-count: infinite;
+-webkit-animation-iteration-count: infinite;
+}
+@keyframes floating {
+    0% {
+        transform: translateY(0%);  
+    }
+    50% {
+        transform: translateY(8%);  
+    }   
+    100% {
+        transform: translateY(0%);
+    }           
+}
+ 
+@-webkit-keyframes floating {
+    0% {
+        -webkit-transform: translateY(0%);  
+    }
+    50% {
+        -webkit-transform: translateY(8%);  
+    }   
+    100% {
+        -webkit-transform: translateY(0%);
+    }           
+}
+.slideUp2
+{
+animation-name: floating2;
+-webkit-animation-name: floating2;
+animation-duration: 1.2s;   
+-webkit-animation-duration: 1.2s;
+
+animation-iteration-count: infinite;
+-webkit-animation-iteration-count: infinite;
+}
+@keyframes floating2 {
+    0% {
+        transform: translateY(0%);  
+    }
+    50% {
+        transform: translateY(5%);  
+    }   
+    100% {
+        transform: translateY(0%);
+    }           
+}
+ 
+@-webkit-keyframes floating2 {
+    0% {
+        -webkit-transform: translateY(0%);  
+    }
+    50% {
+        -webkit-transform: translateY(5%);  
+    }   
+    100% {
+        -webkit-transform: translateY(0%);
+    }           
+}
+.img_text3
+{
+position:absolute;
+background-image:url(50ekspo.png);
+background-repeat: no-repeat;
+z-index:1000;
+min-height:100vw;
+min-width:100vw;
+margin-top:23vw;
+background-position:left 52%;
+background-size: 34.3% 9%;
+margin-left:30vw;
+}
+</style>
+
+</head>
+<body>
+
+<div class="turn hero__back--mover">
+</div>
+
+<div class="general_clas">
+	<div  class="header">
+		<div  class="logo">
+		</div>
+		<div  class="btns">
+			<p class="btn1">
+			О выставке
+			</p>
+			<p class="btn2">
+			<a href="bio.html">
+			Биография
+			</a>
+			</p>
+			<p class="btn3">
+			Экспозиция
+			</p>
+			<p class="btn4">
+			Интересные факты
+			</p>
+		</div>
+	</div>
+	<div  class="body1">
+		<div  class="column1">
+		</div>
+		<div  class="column2">
+			<div  class="column2_cont1">
+				<div  class="cont1_1">
+					<h2>ТАЙНЫ<br> 
+					</h2>
+					<h3>
+					ЛЕОНАРДО ДА ВИНЧИ
+					</h3>
+					<p class="korshun">«Я так подробно писал о коршуне потому, что он – моя судьба...»</p>
+			    </div>
+				<div  class="cont1_2">
+			    </div>
+				<div  class="cont1_3">
+			    </div>
+			</div>
+			<div  class="column2_cont2">
+			</div>
+		</div>
+	</div>
+	<div class="buy_btn">
+	<a href="https://market.yandex.ru/product--portativnaia-akustika-sony-srs-x1/11549467">КОНТАКТЫ</a>
+	</div>
+	<div class="buy_btn2">
+	<a href="https://market.yandex.ru/product--portativnaia-akustika-sony-srs-x1/11549467">БИЛЕТЫ</a>
+	</div>
+	<div class="s_down">
+	</div>
+	<div class="a_down">
+	</div>
+</div>
+<!--<div class="content2">
+	<div class="content2_1">
+	</div>
+	<div class="content2_2">
+
+		<div class="esciz">
+		</div>
+		<div class="name_part">
+		О ВЫСТАВКЕ
+		</div>
+		<div class="img_text1">
+		</div>
+		<div class="img_text2">
+		</div>
+		<div class="esciz_2">
+		</div>
+		<div class="img_text3">
+		</div>
+		<div class="procent">
+		</div>
+		<div class="img_text4">
+		</div>
+		<div class="img_text5">
+		</div>
+	</div>
+</div>-->
+<div id="video2">
+
+</div>
+<div id="fullscreen-bg">
+	<div id="overlay1">
+		<div class="name_part">
+		О ВЫСТАВКЕ
+		</div>
+		<div class="esciz">
+		</div>
+
+		<div class="img_text3">
+		</div>
+		<div class="esciz_2">
+		</div>
+
+ <video id="fullscreen-bg__video">
+<source src="vertu.mp4" type="video/mp4"/>
+</video>
+</div>
+<div id ="kolesa"class="slideUp">
+</div>
+<div id ="korabl"class="slideUp">
+</div>
+<div id ="telega"class="slideUp">
+</div>
+<div id ="vint"class="slideUp">
+</div>
+<div id ="pushka"class="slideUp">
+</div>
+<div id ="telescop"class="slideUp2">
+</div>
+<div id ="vereteno"class="slideUp2">
+</div>
+<div id ="arbalet"class="slideUp">
+</div>
+<div id ="orniopter"class="slideUp2">
+</div>
+<div id ="baraban"class="slideUp2">
+</div>
+<div id ="kolesa2"class="slideUp">
+</div>
+<div id ="korabl2"class="slideUp">
+</div>
+<div id ="telega2"class="slideUp">
+</div>
+<div id ="telescop2"class="slideUp2">
+</div>
+<div id ="vereteno2"class="slideUp2">
+</div>
+<div id ="shtuka2"class="slideUp2">
+</div>
+<div id ="mexanism2"class="slideUp2">
+</div>
+<div id ="arbalet2"class="slideUp">
+</div>
+<div id ="orniopter2"class="slideUp2">
+</div>
+<div id ="baraban2"class="slideUp2">
+</div>
+<div class="img_text1">
+</div>
+<!--<div class="content2">
+
+ <video id="fullscreen-bg__video">
+<source src="vertu.mp4" type="video/mp4"/>
+</video>
+	<div class="content2_1">
+	</div>
+	<div class="content2_2">
+
+		<div class="esciz">
+		</div>
+		<div class="name_part">
+		О ВЫСТАВКЕ
+		</div>
+		<div class="img_text1">
+		</div>
+		<div class="img_text2">
+		</div>
+		<div class="esciz_2">
+		</div>
+		<div class="img_text3">
+		</div>
+		<div class="procent">
+		</div>
+		<div class="img_text4">
+		</div>
+		<div class="img_text5">
+		</div>
+	</div>
+</div>-->
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.jInvertScroll.js"></script>
+    <script type="text/javascript">
+    (function($) {
+        $.jInvertScroll(['.scroll'],        // an array containing the selector(s) for the elements you want to animate
+            {
+            //*height: 6000,                   // optional: define the height the user can scroll, otherwise the overall length will be taken as scrollable height
+            onScroll: function(percent) {   //optional: callback function that will be called when the user scrolls down, useful for animating other things on the page
+                console.log(percent);
+            }
+        });
+    }(jQuery));
+
+</script>
+</body>
+</html>
+<script>
+var canMoveHeroImage = true;
+var imghero = document.querySelector('.hero__back--mover');
+var win = { width: window.innerWidth, height: window.innerHeight };
+function throttle(fn, delay){
+	var allowSample = true;
+	return function(e) {
+		if (allowSample) {
+			allowSample = false;
+			setTimeout(function() { allowSample = true; }, delay);
+			fn(e);
+		}
+	};
+}
+window.addEventListener('mousemove', throttle(function(ev) {
+			if( !canMoveHeroImage ) return false;
+			var xVal = -1/(win.height/2)*ev.clientY + 1,
+				yVal = 1/(win.width/2)*ev.clientX - 1,
+				transX = 20/(win.width)*ev.clientX - 10,
+				transY = 20/(win.height)*ev.clientY - 10,
+				transZ = 100/(win.height)*ev.clientY - 50;
+
+			imghero.style.WebkitTransform = 'perspective(1000px) translate3d(' + transX + 'px,' + transY + 'px,' + transZ + 'px) rotate3d(' + xVal + ',' + yVal + ',0,2deg)';
+			imghero.style.transform = 'perspective(1000px) translate3d(' + transX + 'px,' + transY + 'px,' + transZ + 'px) rotate3d(' + xVal + ',' + yVal + ',0,2deg)';
+		}, 100));
+</script>
+<script>
+var vid = document.getElementById("video2");
+vid.onmouseover = function(){
+var vid2 = document.getElementById("fullscreen-bg__video");
+vid2.play();
+}
+
+</script>
