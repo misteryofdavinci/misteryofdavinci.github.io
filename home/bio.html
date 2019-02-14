@@ -305,7 +305,7 @@ display:none;
 </div>
 <div id="overfloww5">
 <video class="overfloww5" id="flow5" >
-<source src="vid5_end.mp4" type="video/mp4"/>
+<source src="vertu.mp4" type="video/mp4"/>
 </video>
 </div>
   <div id="bg" >
@@ -433,14 +433,14 @@ window.location.href = "video5.html"
 }
 
 
-function scrollHorizontally(e) { //включает горизонтальный скрол элемента колесом
+function scrollHorizontally(e) { //ГўГЄГ«ГѕГ·Г ГҐГІ ГЈГ®Г°ГЁГ§Г®Г­ГІГ Г«ГјГ­Г»Г© Г±ГЄГ°Г®Г« ГЅГ«ГҐГ¬ГҐГ­ГІГ  ГЄГ®Г«ГҐГ±Г®Г¬
 e = window.event || e;
-var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail))); //это шаг колеса для разных браузеров
-document.documentElement.scrollLeft -= (delta * 40); //прокручиваем всю страницу
+var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail))); //ГЅГІГ® ГёГ ГЈ ГЄГ®Г«ГҐГ±Г  Г¤Г«Гї Г°Г Г§Г­Г»Гµ ГЎГ°Г ГіГ§ГҐГ°Г®Гў
+document.documentElement.scrollLeft -= (delta * 40); //ГЇГ°Г®ГЄГ°ГіГ·ГЁГўГ ГҐГ¬ ГўГ±Гѕ Г±ГІГ°Г Г­ГЁГ¶Гі
 e.preventDefault();
 };
 
-function addMouseWell(elem, callback) { //вешает кроссплатформенный обработчик на колесо мыши над элементом
+function addMouseWell(elem, callback) { //ГўГҐГёГ ГҐГІ ГЄГ°Г®Г±Г±ГЇГ«Г ГІГґГ®Г°Г¬ГҐГ­Г­Г»Г© Г®ГЎГ°Г ГЎГ®ГІГ·ГЁГЄ Г­Г  ГЄГ®Г«ГҐГ±Г® Г¬Г»ГёГЁ Г­Г Г¤ ГЅГ«ГҐГ¬ГҐГ­ГІГ®Г¬
 if (elem.addEventListener) {
 if ('onwheel' in document) {
 elem.addEventListener("wheel", callback);
